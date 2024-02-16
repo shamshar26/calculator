@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>js test1</title>
+</head>
+
+
+<style type="text/css">
+
+
+	body {
+              background-image:url(https://img.freepik.com/free-vector/seamless-pattern-with-school-office-stationery_107791-9568.jpg?w=740&t=st=1708025004~exp=1708025604~hmac=37c563ce1baa1ca16d107ad1523c7e22669616e9e1e139a611dd113f851eab17); 
+	}
+
+
+
+	 h1 {
+        	color:#ede8e1;
+        	background-color:#332927;
+        	padding: 20px;
+        	border-radius: 15px;
+        }
+
+
+        .main {
+             display: flex;
+             flex-direction: column; 
+             align-items: center; 
+             justify-content: center; 
+             height: 100vh; 
+        }
+
+
+	#num1,#num2,#result {
+		padding: 30px;
+		 margin-bottom: 10px;
+		 border-radius: 10px;
+		 background-color:#c98461;
+		 border-color:#f2f1f0 ;
+
+	}
+
+	#operator {
+		padding: 20px;
+		 margin-bottom: 10px;
+		 margin-left: 70px;
+		 border-radius: 10px;
+		 background-color: #6e6a68;
+		 border-color:#f2f1f0 ;
+		 color:#ede8e1 ;
+	}
+        
+        .button {
+        	padding: 20px;
+        	 margin-bottom: 10px;
+        	 margin-left: 80px;
+        	 border-radius: 10px;
+        	 background-color: #6e6a68;
+        	 border-color:#f2f1f0 ;
+        	 color:#ede8e1 ;
+        }
+
+
+        .sub{
+        	 background-color:#332927;
+        	 padding: 60px;
+        	 border-radius: 20px;
+        }
+
+
+
+        input[type="text"] {
+                font-weight: bold;
+                color: white;
+        }
+
+
+
+      
+
+
+       
+
+
+     
+
+
+
+</style>
+
+
+
+
+
+
+
+
+
+
+<body>
+    
+        
+	<div class="main">
+		<h1> YOU CAN COUNT ON ME </h1>
+		<div class="sub">
+		<div >
+	           <input type="text" id="num1" >
+	          </div>
+
+                <div >
+		<select id="operator">
+			<option value="add">+</option>
+			<option value="sub">-</option>
+			<option value="mul">*</option>
+			<option value="div">/</option>
+		</select>
+		</div>
+
+		<div >
+		<input type="text" id="num2">
+		</div>
+	
+      <div >
+     <button onclick="Operate()" class="button"><b>=</b></button> 
+     </div>
+      
+      <div >
+      <input type="text" id="result">
+      </div>
+
+      </div>
+
+
+      </div>
+
+
+     <script type="text/javascript">
+     	
+     	function add(num1,num2){
+
+     	 let sum =Number(num1) +Number(num2);
+     	 document.getElementById('result').value = sum;
+     	}
+
+     	function sub(num1,num2){
+
+     		let diff =num1 - num2;
+     		document.getElementById('result').value = diff;
+     	}
+
+
+     	function mul(num1,num2){
+
+     		let prdt =num1 * num2;;
+     		document.getElementById('result').value = prdt;
+     	}
+
+     	function div(num1,num2){
+
+     		let divs =num1 / num2;
+     		document.getElementById('result').value = divs;
+     	}
+
+     	function Operate(){
+
+     		let num1 = document.getElementById('num1').value;
+     		let num2 = document.getElementById('num2').value;
+     		let operator = document.getElementById('operator').value;
+             
+             if(operator =='add'){
+             	add(num1,num2);
+             }
+
+             if(operator =='sub'){
+             	sub(num1,num2);
+             }
+
+             if(operator =='mul'){
+             	mul(num1,num2);
+             }
+
+             if(operator =='div'){
+             	div(num1,num2);
+             }
+
+         }
+       
+    
+
+
+   
+
+
+     </script>  
+
+
+</body>
+</html>
